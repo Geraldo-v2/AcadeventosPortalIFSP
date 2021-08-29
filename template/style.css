@@ -1,0 +1,111 @@
+html{
+    font-size: 62.5%; /*10px*/
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: 'hero';
+    src: url('fonts/hero_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'hero', Arial, Helvetica, sans-serif;
+}
+
+/*Layout*/
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header{
+    grid-area: header;
+    height: 6rem;
+    background-color: #1851cc;
+}
+main{
+    grid-area:main;
+    padding: 6rem;
+}
+footer{
+    grid-area: footer;
+    background-color: #1851cc;
+    color:#ffffff;
+}
+/*Common*/
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+h2{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #83d134
+}
+/*Header*/
+header a{
+    color:#ffffff;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+.brand{
+   width: 35%;
+   margin-left: 2rem;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.row.center{
+    justify-content: center;
+}
+/*Image*/
+
+img{
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+img.medium{
+    max-width: 29rem;
+    width: 100%;
+}
+/*Card*/
+.card{
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 1.5rem;
+    margin: 1rem;
+}
+.card-body{
+    padding: 1rem;
+}
+.card-body > * {
+    margin-bottom: 0.5rem;
+}
+.resume{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+.date{
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+.institute{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}

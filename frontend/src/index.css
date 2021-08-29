@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Hero";
+  src: local("Hero"),
+    url("./fonts/hero_regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+html{
+  font-size: 62.5%; /*10px*/
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Hero',Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+#root{
+  height: 100%;
+}
+
+/*Layout*/
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+      'header'
+      'main'
+      'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  background-image: linear-gradient(to bottom right, #137E27 , #5DE3FF);
+  background-repeat:repeat;
+  background-size:cover;
+  background-position:center;
+}
+header{
+  grid-area: header;
+  height: 9rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: rgba(14, 14, 14, 0.5);
+}
+.signin{
+  font-size: 2.5rem;
+}
+main{
+  grid-area:main;
+  padding: 6rem;
+}
+footer{
+  grid-area: footer;
+  height: 9rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: rgba(14, 14, 14, 0.5);
+  color:#ffffff;
+}
+/*Common*/
+h1{
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 2rem;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color:#ffffff
+}
+a:hover{
+  color: #83d134
+}
+/*Header*/
+header a{
+  color:#ffffff;
+  padding: 1rem;
+  margin-right: 2rem;
+}
+.brand{
+ width: 50%;
+ margin-left: 2rem;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center{
+  justify-content: center;
+}
+/*Image*/
+
+img.medium{
+  max-width: 35rem;
+  width: 40rem; /* width of container */
+  height: 50rem; /* height of container */
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+/*Card*/
+.card{
+  background-color: rgba(14, 14, 14, 0.5);;
+  border-radius: 1.5rem;
+  width: 35rem;
+  height: auto;
+  margin: 1rem;
+  
+}
+.card-body{
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 1rem;
+  max-height: 300ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.name{
+ align-items: center;
+}
+.description{
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.date{
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.campus{
+  font-size: 1.6rem;
+  text-align: right;
+  color: #ffffff;
+}
